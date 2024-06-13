@@ -1,0 +1,5 @@
+package lomboktest;
+
+public class UserDTO {
+
+}

@@ -1,0 +1,9 @@
+package lomboktest;
+
+
+import lomboktest
+public class UserDTO {
+
+	private String name;
+	
+}

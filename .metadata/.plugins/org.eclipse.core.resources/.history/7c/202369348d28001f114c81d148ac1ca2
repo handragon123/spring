@@ -1,0 +1,19 @@
+package lomboktest;
+
+public class UserTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		UserDTO user = new UserDTO();
+		
+		user.setName("hong");
+		user.setAge(20);
+		user.setEmail("hong@e.com"); 
+		
+		System.out.println(user.toString());
+		System.out.println(user.getName());
+		System.out.println(user.getAge());
+		System.out.println(user.getEmail());
+	}
+
+}
