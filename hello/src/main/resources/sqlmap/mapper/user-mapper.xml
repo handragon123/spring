@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="user">
+	<insert id="insertMap" parameterType="map" useGeneratedKeys="true" keyProperty="idx">
+	<![CDATA[
+		insert into member(id, password, name) values (#{id}, #{password}, #{name})
+	]]>
+	</insert>
+	<insert id="insert" parameterType="com.hello.web.dto.UserDTO" useGeneratedKeys="true" keyProperty="idx">
+	<![CDATA[
+		insert into member(id, password, name) values (#{id}, #{password}, #{name})
+	]]>
+	</insert>
+	
+	<select id="login" parameterType="com.hello.web.dto.UserDTO" resultType="com.hello.web.dto.UserDTO">
+	<![CDATA[
+		select id,password from member
+		where id = #{id} and password = #{password}
+	]]>
+	</select>
+	
+	
+	<delete id="delete" parameterType="com.hello.web.dto.BookDTO">
+	<![CDATA[
+		delete from book where book_id = #{book_id} 
+	]]>
+	</delete>
+	<select id="listMap" resultType="map">
+	<![CDATA[
+		select book_id, title, category, price, insert_date 
+		from book 
+		order by insert_date desc
+	]]>
+	</select>
+	<select id="list" resultType="com.hello.web.dto.BookDTO">
+	<![CDATA[
+		select book_id, title, category, price, insert_date 
+		from book 
+		order by insert_date desc
+	]]>
+	</select>
+	
+	<select id="detail" parameterType="map" resultType="com.hello.web.dto.BookDTO">
+	<![CDATA[
+		select book_id, title, category, price, insert_date 
+		from book 
+		where book_id = #{book_id}
+	]]>
+	</select>
+	
+	
+</mapper>

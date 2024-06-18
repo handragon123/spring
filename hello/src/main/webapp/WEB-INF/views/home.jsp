@@ -6,9 +6,14 @@
 </head>
 <body>
 <h1>
-	Hello world!  
+	Book
 </h1>
-
-<P>  The time on the server is ${serverTime}. </P>
+<ul>
+	<li><a href="book/list">List</a></li>
+	<li><a href="book/listJstl">List-JSTL</a></li>
+	<li><a href="book/create">Create</a></li>
+	<li><a href="user/join">Join</a></li>
+	<li><a href="user/login">Login</a></li>
+</ul>
 </body>
 </html>

@@ -5,20 +5,29 @@
 	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
-	<!--  
-   <bean id="samsung" class="polymorphism.SamsungTV">
-      <constructor-arg ref="apple" />
-      <constructor-arg value="1000000" />
+
+	<!-- 
+   <bean id="samsung" class="polymophism.SamsungTV">
+   생성자(constructor)로 주입하는 방식
+   	<constructor-arg ref="apple" />
+   	<constructor-arg value="1000000" />
    </bean>
-   <bean id="samsung2" class="polymorphism.SamsungTV2">
-      <property name="speaker" ref="apple" />
-      <property name="price" value="200000" />
-   </bean>
-   <bean id="samsung3" class="polymorphism.SamsungTV3" p:speaker-ref="sony" p:price="30000" />
-   <bean id="lg" class="polymorphism.LgTV" />
-   <bean id="sony" class="polymorphism.SonySpeaker" />
-   <bean id="apple" class="polymorphism.AppleSpeaker" />
    -->
-   <context:component-scan base-package="polymorphism "></context:component-scan>
+   
+   <bean id="samsung2" class="polymophism.SamsungTV2">
+   	<property name="speaker" ref="apple" />
+   	<property name="price" value = "200000"/>
+   </bean>
+   
+   <!-- setter 방식
+   <bean id="samsung3" class="polymophism.SamsungTV3" p:speaker-ref="sony" p:price="30000" />
+   <bean id="lg" class="polymophism.LgTV" />
+   <bean id="sony" class="polymophism.SonySpeaker" />
+   <bean id="apple" class="polymophism.AppleSpeaker" />
+   -->
+   
+   <!-- Namespaces_context : 어노테이션을 쓰기 위한 설정 -->
+   <context:component-scan base-package="polymophism"></context:component-scan>
 
 </beans>
+
